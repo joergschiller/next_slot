@@ -9,6 +9,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2021.0225)
     multi_xml (0.6.0)
+    rake (13.0.3)
 
 PLATFORMS
   x86_64-darwin-20
@@ -16,6 +17,7 @@ PLATFORMS
 DEPENDENCIES
   colorize
   httparty
+  rake
 
 BUNDLED WITH
    2.2.3
