@@ -64,6 +64,11 @@ earliest = dates
              .first
 
 puts ''
-puts "Earliest appointment is available in #{earliest[:location].yellow} with #{earliest[:vaccine].yellow} on #{earliest[:next_slot].to_s.yellow}."
-puts ''
-puts 'Book your appointment at https://www.doctolib.de/institut/berlin/ciz-berlin-berlin'.light_black
+
+if earliest
+  puts "Earliest appointment is available in #{earliest[:location].yellow} with #{earliest[:vaccine].yellow} on #{earliest[:next_slot].to_s.yellow}."
+  puts ''
+  puts 'Book your appointment at https://www.doctolib.de/institut/berlin/ciz-berlin-berlin'.light_black
+else
+  puts 'No appointment available.'.red
+end
