@@ -19,8 +19,10 @@ def with_spinning_rod
 
   value = yield
 
-  spinning.kill
+  spinning.exit
+
   print "\b " # Clear last character
+  printf("\033[?25h") # Restore cursor
 
   value
 end
