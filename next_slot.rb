@@ -49,6 +49,9 @@ dates = URLS.map do |key, url|
 
   next_slot = with_spinning_rod do
     response = HTTParty.get(url, headers: { 'User-Agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36' })
+
+    raise "Request not successful:\n\n#{response.inspect}" unless response.success?
+
     response.parsed_response['next_slot']
   end
 
