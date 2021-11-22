@@ -1,8 +1,13 @@
 #!/usr/bin/env ruby
 
-require 'date'
-require 'colorize'
-require 'httparty'
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem "colorize"
+  gem "httparty"
+  gem "rake"
+end
 
 # Credits to https://rosettacode.org/wiki/Spinning_rod_animation/Text#Ruby
 def with_spinning_rod
